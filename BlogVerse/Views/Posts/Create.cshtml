@@ -1,0 +1,131 @@
+﻿@model BlogVerse.Models.CreatePostViewModel
+@{
+    ViewData["Title"] = "Create Post";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+<style>
+    .create-form-container {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        max-width: 900px;
+        margin: 2rem auto;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .form-heading {
+        text-align: center;
+        color: #8E83A9;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: bold;
+    }
+
+    .form-label {
+        font-weight: 600;
+        color: #4A4A4A;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 1rem;
+        outline: none;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+        transition: border 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .form-control:focus {
+            border-color: #B6A8CA;
+            box-shadow: 0 0 0 3px rgba(182, 168, 202, 0.3);
+        }
+
+    .btn-group {
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-end;
+    }
+
+    .btn {
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 2rem;
+        font-weight: bold;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    .btn-publish {
+        background-color: #8E83A9;
+        color: white;
+    }
+
+    .btn-draft {
+        background-color: #C9C3DE;
+        color: white;
+    }
+
+    .btn:hover {
+        transform: translateY(-2px);
+        opacity: 0.95;
+    }
+</style>
+
+<div class="create-form-container">
+    <h2 class="form-heading">Create a New Blog Post</h2>
+
+    <form asp-action="Create" method="post" enctype="multipart/form-data">
+        <!-- Title -->
+        <label for="Title" class="form-label">Title</label>
+        <input type="text" id="Title" name="Title" class="form-control" required />
+
+        <!-- Category -->
+        <label for="Category" class="form-label">Category</label>
+        <select id="Category" name="Category" class="form-control" required>
+            <option value="">-- Select Category --</option>
+            <option value="Tech">Tech</option>
+            <option value="Lifestyle">Lifestyle</option>
+            <option value="Health">Health</option>
+            <option value="Entertainment">Entertainment</option>
+        </select>
+
+        <!-- Image -->
+        <label for="Image" class="form-label">Featured Image</label>
+        <input type="file" id="Image" name="Image" class="form-control" accept="image/*" />
+
+        <!-- Content -->
+        <label for="Content" class="form-label">Content</label>
+        <textarea id="Content" name="Content" class="form-control"></textarea>
+
+        <!-- Buttons -->
+        <div class="btn-group mt-4">
+            <button type="submit" name="submitButton" value="SaveDraft" class="btn btn-draft">Save as Draft</button>
+            <button type="submit" name="submitButton" value="Publish" class="btn btn-publish">Publish</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.tiny.cloud/1/icfog4ecnzjz60lfl9fczlxk04aluusho74t6b6xkv5h1imw/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#Content',
+            height: 500,
+            menubar: true,
+            plugins: 'advlist autolink lists link image media table code help wordcount',
+            toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | bullist numlist | link image media | code',
+            content_style: 'body { font-family:Arial,sans-serif; font-size:16px }'
+        });
+
+        document.querySelector('form').addEventListener('submit', function () {
+            tinymce.triggerSave();
+        });
+    </script>
+}
