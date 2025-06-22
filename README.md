@@ -43,6 +43,40 @@
 
 ---
 
+## 📸 Screenshots
+
+Here are a few glimpses of BlogVerse in action:
+
+### 🏠 Landing Page  
+![Landing Page](https://github.com/sakshi01coder/BlogVerse/blob/master/screenshots/Screenshot%202025-06-22%20093632.png?raw=true)
+
+![Landing Page2](https://github.com/sakshi01coder/BlogVerse/blob/master/screenshots/Screenshot%202025-06-22%20094739.png?raw=true)
+
+### 🔐 Registration Page  
+![Register Page](https://github.com/sakshi01coder/BlogVerse/blob/master/screenshots/Screenshot%202025-06-22%20094803.png?raw=true)
+
+### 🔑 Login Page  
+![Login Page](https://github.com/sakshi01coder/BlogVerse/blob/master/screenshots/Screenshot%202025-06-22%20094934.png?raw=true)
+
+## 🧭 Main Sections
+![main section1](https://github.com/sakshi01coder/BlogVerse/blob/master/screenshots/Screenshot%202025-06-22%20094949.png?raw=true)
+
+![main section2](https://github.com/sakshi01coder/BlogVerse/blob/master/screenshots/Screenshot%202025-06-22%20095028.png?raw=true)
+
+### 📊 Writer Dashboard  
+![Dashboard](https://github.com/sakshi01coder/BlogVerse/blob/master/screenshots/Screenshot%202025-06-22%20095050.png?raw=true)
+
+### 📝 Create Post (TinyMCE Editor)  
+![Create Post](https://github.com/sakshi01coder/BlogVerse/blob/master/screenshots/Screenshot%202025-06-22%20095111.png?raw=true)
+
+### 📈 Analytics View  
+![Analytics View](https://github.com/sakshi01coder/BlogVerse/blob/master/screenshots/Screenshot%202025-04-16%20224337.png?raw=true)
+
+### 🧠 Blog Detail View with Popup  
+![Blog Detail + Popup](https://github.com/sakshi01coder/BlogVerse/blob/master/screenshots/Screenshot%202025-06-22%20094751.png?raw=true)
+
+---
+
 ## 🏗️ Project Setup
 
 ### ✅ Prerequisites
